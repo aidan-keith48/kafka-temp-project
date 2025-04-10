@@ -1,0 +1,22 @@
+# Python-related files
+*.pyc
+__pycache__/
+
+# Docker-related files
+*.env
+*.log
+
+# Ignore OS-specific files (optional)
+.DS_Store   # macOS
+Thumbs.db   # Windows
+
+# IDE/editor files (optional)
+.vscode/
+.idea/
+*.swp       # Vim swap files
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*.out

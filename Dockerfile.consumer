@@ -1,0 +1,15 @@
+FROM python:3.9-slim
+
+# Install networking tools
+RUN apt-get update && apt-get install -y iputils-ping telnet && apt-get clean
+
+# Set the working directory
+WORKDIR /app
+
+# Copy script and install dependencies
+COPY consumer.py /app/consumer.py
+COPY requirements.txt /app/requirements.txt
+RUN pip install -r requirements.txt
+
+# Run the consumer script
+CMD ["python", "consumer.py"]
